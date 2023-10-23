@@ -1,0 +1,35 @@
+.completed-task{
+    text-decoration: line-through;
+    color: #116A7B;opacity: 0.5;
+  }
+  ol {
+    list-style-type: none;
+    display: flex;
+    
+  }
+
+
+.alter{
+  font-size: xx-large;
+}
+.containers{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body{
+  font-family: 'Poppins', sans-serif;
+
+}
+.day{
+  background-color: rgb(0, 154, 154);
+  color: black;
+}
+@media(min-width:380px) {
+  .mobile{
+    padding-right: 20px;
+  }
+  i{
+    font-size: xx-large;
+  }
+}

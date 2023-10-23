@@ -1,0 +1,28 @@
+<%- include("partials/header.ejs") %>
+
+<div class="d-flex flex-column flex-md-row p-4 gap-4 py-md-5 align-items-center justify-content-center border-bottom">
+    <div class="list-group">
+        <div class="list-group-item d-flex gap-3 day">
+            <h2>Work List</h2>
+        </div>
+    <% for(let i = 0;i<newListItems2.length;i++) { %>
+      <label class="list-group-item d-flex gap-3">
+        <ol>
+        <input class="form-check-input me-3 mt-3" type="checkbox" id="myCheckbox<%= i %>" value="src"  style="font-size: 1.375em;">
+        
+            <li class="child mt-2 pt-1 form-checked-content fs-5"><strong><%= (i + 1) + '. ' + newListItems2[i] %></strong></li>
+     
+    </ol>
+      </label>
+      
+      <% } %>
+      
+        <form class = "list-group-item d-flex gap-3" action="/submit2" method="POST" id="form" >  
+            <input class="form-control form-control-dark" name="newItem2" type="text" placeholder="New Item" autocomplete="off">  
+
+            <button type="submit" class="btn btn-outline-light me-2">Add+</button>  </form>   
+      
+    </div> 
+    
+    </div>
+<%- include("partials/footer.ejs") %>
